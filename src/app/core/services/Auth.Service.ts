@@ -46,5 +46,9 @@ export class AuthService {
       isAuthenticated(): boolean {
         return !!localStorage.getItem('token');
       }
+
+      getRoles() {
+        return this.http.get(`${this.apiUrl}/roles`);
+      }
     
 }
