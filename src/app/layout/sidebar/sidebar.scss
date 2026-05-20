@@ -1,0 +1,21 @@
+.sidebar-subitem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    color: #4b5563;
+    transition: all .2s ease;
+}
+
+.sidebar-subitem:hover {
+    background: #eff6ff;
+    color: #2563eb;
+    transform: translateX(2px); 
+}
+
+:host {
+  display: block;
+  height: 100%;
+}

@@ -8,7 +8,7 @@ import { AuthService } from '../../../core/services/Auth.Service';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './register.html',
   styleUrl: './register.scss',
 })

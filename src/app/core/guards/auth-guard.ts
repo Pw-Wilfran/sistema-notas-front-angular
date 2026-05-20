@@ -1,5 +1,6 @@
 import { CanActivateFn } from '@angular/router';
 
+
 export const roleGuard: CanActivateFn = (route) => {
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 

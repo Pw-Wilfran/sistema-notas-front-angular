@@ -1,1 +1,212 @@
-<p>dashboard works!</p>
+<!-- dashboard-layout.component.html -->
+<div class="flex h-screen overflow-hidden bg-white text-gray-800">
+
+  <!-- SIDEBAR -->
+
+  <!-- CONTENT -->
+  <div class="flex flex-1 flex-col overflow-hidden">
+
+    <!-- NAVBAR -->
+
+    <!-- MAIN -->
+    <main class="flex-1 overflow-y-auto p-4 md:p-6">
+
+      <!-- TOP STATS -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-6">
+
+        <!-- CARD -->
+        <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
+          <div class="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/10 blur-2xl"></div>
+
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-sm font-light opacity-80">Total Sales</p>
+              <h2 class="mt-2 text-3xl font-bold tracking-tight">$24,500</h2>
+              <span class="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs">
+                +12.5%
+              </span>
+            </div>
+
+            <div class="rounded-2xl bg-white/15 p-3 backdrop-blur">
+              <span class="material-icons text-3xl">trending_up</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-sm text-gray-500">Orders</p>
+              <h2 class="mt-2 text-3xl font-bold">1,250</h2>
+              <span class="text-xs text-green-500">+8.2% this week</span>
+            </div>
+
+            <div class="rounded-2xl bg-blue-50 p-3">
+              <span class="material-icons text-blue-500">shopping_bag</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-sm text-gray-500">Customers</p>
+              <h2 class="mt-2 text-3xl font-bold">8,420</h2>
+              <span class="text-xs text-pink-500">+3.4% today</span>
+            </div>
+
+            <div class="rounded-2xl bg-pink-50 p-3">
+              <span class="material-icons text-pink-500">groups</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-sm text-gray-500">Revenue</p>
+              <h2 class="mt-2 text-3xl font-bold">$18.2K</h2>
+              <span class="text-xs text-yellow-500">Monthly goal 75%</span>
+            </div>
+
+            <div class="rounded-2xl bg-yellow-50 p-3">
+              <span class="material-icons text-yellow-500">payments</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN GRID -->
+      <section class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+        <!-- WELCOME -->
+        <div class="xl:col-span-2 overflow-hidden rounded-[28px] bg-white shadow-sm border border-gray-100">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-8 p-8">
+
+            <div class="flex-1">
+              <span class="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-600">
+                Daily Performance
+              </span>
+
+              <h1 class="mt-4 text-3xl font-bold leading-tight text-gray-800">
+                Congratulations Franklin 👋
+              </h1>
+
+              <p class="mt-3 max-w-lg text-gray-500 leading-relaxed">
+                You have achieved 75% of your sales target today. Keep going to unlock your weekly bonus rewards.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-4">
+
+                <div class="rounded-2xl bg-blue-50 px-5 py-4">
+                  <p class="text-xs text-gray-500">Sales</p>
+                  <h3 class="mt-1 text-xl font-bold text-blue-600">$14,800</h3>
+                </div>
+
+                <div class="rounded-2xl bg-pink-50 px-5 py-4">
+                  <p class="text-xs text-gray-500">Profit</p>
+                  <h3 class="mt-1 text-xl font-bold text-pink-500">$2,200</h3>
+                </div>
+
+              </div>
+
+              <button class="mt-6 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700">
+                View Report
+              </button>
+            </div>
+
+            <div class="hidden md:flex">
+              <img
+                src="assets/login.jpg"
+                class="h-56 object-contain drop-shadow-xl"
+                alt="Illustration"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- REVENUE CARD -->
+        <div class="overflow-hidden rounded-[28px] bg-gradient-to-br from-blue-500 via-indigo-500 to-blue-700 p-7 text-white shadow-xl shadow-blue-200">
+
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm opacity-80">Revenue Status</p>
+              <h2 class="mt-2 text-3xl font-bold">$48,230</h2>
+            </div>
+
+            <div class="rounded-2xl bg-white/15 p-3 backdrop-blur">
+              <span class="material-icons">monitoring</span>
+            </div>
+          </div>
+
+          <!-- BARS -->
+          <div class="mt-10 flex h-44 items-end gap-3">
+
+            <div class="flex w-full flex-col items-center gap-2">
+              <div class="w-full rounded-t-2xl bg-white/20 h-20"></div>
+              <span class="text-xs opacity-70">Mon</span>
+            </div>
+
+            <div class="flex w-full flex-col items-center gap-2">
+              <div class="w-full rounded-t-2xl bg-white/40 h-28"></div>
+              <span class="text-xs opacity-70">Tue</span>
+            </div>
+
+            <div class="flex w-full flex-col items-center gap-2">
+              <div class="w-full rounded-t-2xl bg-white h-40"></div>
+              <span class="text-xs opacity-70">Wed</span>
+            </div>
+
+            <div class="flex w-full flex-col items-center gap-2">
+              <div class="w-full rounded-t-2xl bg-white/60 h-32"></div>
+              <span class="text-xs opacity-70">Thu</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CHART -->
+        <div class="xl:col-span-3 rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm">
+
+          <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Revenue Analytics
+              </h3>
+              <p class="text-sm text-gray-500">
+                Overview of your monthly business growth
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <select class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm outline-none focus:border-blue-400">
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Yearly</option>
+              </select>
+
+              <button class="rounded-xl bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700">
+                Export
+              </button>
+            </div>
+          </div>
+
+          <!-- CHART PLACEHOLDER -->
+          <div class="flex h-[350px] items-center justify-center rounded-3xl border border-dashed border-blue-100 bg-gradient-to-b from-blue-50 to-white">
+            <div class="text-center">
+              <span class="material-icons text-6xl text-blue-200">
+                stacked_line_chart
+              </span>
+
+              <p class="mt-3 text-sm text-blue-300">
+                Chart.js / ApexCharts goes here
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</div>

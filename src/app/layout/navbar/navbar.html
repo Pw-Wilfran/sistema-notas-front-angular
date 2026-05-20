@@ -1,1 +1,36 @@
-<p>navbar works!</p>
+<nav
+  class="h-16 shrink-0 relative z-50 bg-gray-100  flex items-center px-4 gap-4"
+>
+  <!-- MENU BUTTON -->
+  <button
+    (click)="toggleSidebar()"
+    class="p-2 pl-3 px-4 rounded-full hover:bg-gray-200 transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-7 h-7 text-gray-700"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
+  </button>
+
+  <!-- LOGO -->
+  <div
+    class="w-8 h-8 rounded bg-green-500 flex items-center justify-center text-white font-bold"
+  >
+    w
+  </div>
+
+  <!-- TITLE -->
+  <h1 class="text-3xl font-normal text-gray-700">
+    W-studio
+  </h1>
+</nav>
