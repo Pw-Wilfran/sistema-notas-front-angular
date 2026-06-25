@@ -1,29 +1,15 @@
 <!-- OVERLAY MOBILE -->
-<div
-  (click)="closeSidebar()"
+<div (click)="closeSidebar()"
   class="fixed inset-0 top-16 z-30 bg-black/30 backdrop-blur-[1px] transition-opacity duration-300 lg:hidden"
-
-  [class.opacity-0]="!sidebarService.opened"
-  [class.pointer-events-none]="!sidebarService.opened"
-
-></div>
+  [class.opacity-0]="!sidebarService.opened" [class.pointer-events-none]="!sidebarService.opened"></div>
 
 <!-- SIDEBAR -->
 <aside
   class="fixed lg:relative top-16 lg:top-0 left-0 z-40 h-[calc(100vh-64px)] lg:h-full bg-gray-100  transition-all duration-300 ease-in-out overflow-hidden flex flex-col"
-
   [class.w-0]="!sidebarService.opened && sidebarService.mobile"
-
-  [class.w-[85px]]="!sidebarService.opened && !sidebarService.mobile"
-
-  [class.w-[280px]]="sidebarService.opened"
-
+  [class.w-[85px]]="!sidebarService.opened && !sidebarService.mobile" [class.w-[280px]]="sidebarService.opened"
   [class.-translate-x-full]="!sidebarService.opened && sidebarService.mobile"
-
-  [class.translate-x-0]="sidebarService.opened"
-
-  lg:translate-x-0
->
+  [class.translate-x-0]="sidebarService.opened" lg:translate-x-0>
   <!-- CONTENT -->
   <div class="flex flex-col h-full p-2">
     <!-- TOP -->
@@ -32,32 +18,20 @@
         <ul class="space-y-2">
           <!-- DASHBOARD -->
           <li>
-            <button
-              routerLink="/dashboard"
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200"
-            >
+            <button routerLink="/dashboard"
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  class="bi bi-columns-gap transition-transform duration-200 group-hover:scale-110"
-                  viewBox="0 0 16 16"
-                >
+                <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                  fill="currentColor" class="bi bi-columns-gap transition-transform duration-200 group-hover:scale-110"
+                  viewBox="0 0 16 16">
                   <path
-                    d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"
-                  />
+                    d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Dashboard
               </span>
             </button>
@@ -65,30 +39,21 @@
 
           <!-- USERS -->
           <li>
-            <button
-              routerLink="/user"
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200"
-            >
+            <button routerLink="/user"
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6 transition-transform duration-200 group-hover:scale-110"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 transition-transform duration-200 group-hover:scale-110" fill="currentColor"
+                  viewBox="0 0 24 24">
                   <path
-                    d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"
-                  ></path>
+                    d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z">
+                  </path>
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Usuarios
               </span>
             </button>
@@ -98,135 +63,76 @@
           <li>
             <input type="checkbox" id="people_dropdown" class="peer hidden" />
 
-            <label
-              for="people_dropdown"
-              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
-            >
+            <label for="people_dropdown"
+              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200">
               <div class="flex items-center gap-4 min-w-0">
                 <div class="flex items-center justify-center min-w-[24px]">
-                  <svg
-                    (click)="toggleSidebar()"
-                    class="group-hover:scale-110 transition-transform duration-300"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg (click)="toggleSidebar()" class="group-hover:scale-110 transition-transform duration-300"
+                    width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                      stroke="currentColor"
-                    ></path>
+                      stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor"></path>
                   </svg>
                 </div>
 
-                <span
-                  class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                  [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                  [class.w-0]="!(sidebarService.isOpen$ | async)"
-                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-                >
+                <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                  [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                   Personas
                 </span>
               </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                 class="w-4 h-4 shrink-0 transition-transform duration-300 peer-checked:rotate-180"
-                [class.hidden]="!(sidebarService.isOpen$ | async)"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
+                [class.hidden]="!(sidebarService.isOpen$ | async)" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </label>
 
             <!-- SUBMENU -->
-            <div
-              class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
-              [class.hidden]="!(sidebarService.isOpen$ | async)"
-            >
+            <div class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
+              [class.hidden]="!(sidebarService.isOpen$ | async)">
               <div class="overflow-hidden">
                 <div class="mt-1 ml-11 flex flex-col gap-1 pl-4">
-                  <button
-                    routerLink="/students"
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/students"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     <div class="pr-1.5">
-                      <svg
-                        width="16px"
-                        height="16px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                      <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M10.05 2.53004L4.03002 6.46004C2.10002 7.72004 2.10002 10.54 4.03002 11.8L10.05 15.73C11.13 16.44 12.91 16.44 13.99 15.73L19.98 11.8C21.9 10.54 21.9 7.73004 19.98 6.47004L13.99 2.54004C12.91 1.82004 11.13 1.82004 10.05 2.53004Z"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path
                           d="M5.63 13.08L5.62 17.77C5.62 19.04 6.6 20.4 7.8 20.8L10.99 21.86C11.54 22.04 12.45 22.04 13.01 21.86L16.2 20.8C17.4 20.4 18.38 19.04 18.38 17.77V13.13"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M21.4 15V9"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.4 15V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
                       </svg>
                     </div>
                     Estudiantes
                   </button>
 
-                  <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/teachers"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     <div class="pr-1.5">
-                      <svg
-                        fill="currentColor"
-                        height="16px"
-                        width="16px"
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 299.97 299.97"
-                        xml:space="preserve"
-                      >
+                      <svg fill="currentColor" height="16px" width="16px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 299.97 299.97" xml:space="preserve">
                         <g>
                           <g>
                             <g>
                               <path
                                 d="M149.985,126.898c34.986,0,63.449-28.463,63.449-63.449C213.435,28.463,184.971,0,149.985,0S86.536,28.463,86.536,63.449
                                   C86.536,98.436,114.999,126.898,149.985,126.898z M149.985,15.15c26.633,0,48.299,21.667,48.299,48.299
-                                  s-21.667,48.299-48.299,48.299s-48.299-21.667-48.299-48.299S123.353,15.15,149.985,15.15z"
-                              />
-                              <path
-                                d="M255.957,271.919l-20.807-86.313c-2.469-10.244-11.553-17.399-22.093-17.399c-13.216,0-114.332,0-126.145,0
+                                  s-21.667,48.299-48.299,48.299s-48.299-21.667-48.299-48.299S123.353,15.15,149.985,15.15z" />
+                              <path d="M255.957,271.919l-20.807-86.313c-2.469-10.244-11.553-17.399-22.093-17.399c-13.216,0-114.332,0-126.145,0
                                   c-10.538,0-19.623,7.155-22.093,17.399l-20.807,86.313c-3.444,14.289,7.377,28.051,22.093,28.051h167.76
                                   C248.563,299.97,259.407,286.229,255.957,271.919z M66.105,284.82c-4.898,0-8.513-4.581-7.364-9.35l20.807-86.314
                                   c0.823-3.415,3.851-5.799,7.365-5.799H121.4l-9.553,67.577c-0.283,2,0.244,4.029,1.464,5.637l21.422,28.249H66.105z
                                   M127.291,249.932l9.411-66.574h26.567l9.411,66.574l-22.695,29.927L127.291,249.932z M233.865,284.82h-68.628l21.421-28.248
                                   c1.22-1.609,1.747-3.638,1.464-5.637l-9.553-67.577h34.487c3.513,0,6.542,2.385,7.365,5.8l20.807,86.313
-                                  C242.377,280.235,238.769,284.82,233.865,284.82z"
-                              />
+                                  C242.377,280.235,238.769,284.82,233.865,284.82z" />
                             </g>
                           </g>
                         </g>
@@ -235,21 +141,13 @@
                     Docentes
                   </button>
 
-                  <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/attendants"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     <div class="pr-1.5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-people"
-                        viewBox="0 0 16 16"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-people" viewBox="0 0 16 16">
                         <path
-                          d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"
-                        />
+                          d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
                       </svg>
                     </div>
                     Acudientes
@@ -261,30 +159,15 @@
 
           <!-- academico -->
           <li>
-            <input
-              type="checkbox"
-              id="academico_dropdown"
-              class="peer hidden"
-            />
+            <input type="checkbox" id="academico_dropdown" class="peer hidden" />
 
-            <label
-              for="academico_dropdown"
-              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
-            >
+            <label for="academico_dropdown"
+              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200">
               <div class="flex items-center gap-4 min-w-0">
                 <div class="flex items-center justify-center min-w-[24px]">
-                  <svg
-                    (click)="toggleSidebar()"
-                    fill=currentColor
-                    height="22px"
-                    width="22px"
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 392.598 392.598"
-                    xml:space="preserve"
-                  >
+                  <svg (click)="toggleSidebar()" fill=currentColor height="22px" width="22px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 392.598 392.598" xml:space="preserve">
                     <g>
                       <g>
                         <path
@@ -300,105 +183,61 @@
                             c2.78,2.069,8.469,2.521,11.442,1.099c3.685-1.939,6.012-5.624,6.012-9.762V21.85h75.313v106.861L176.614,250.893
                             c-2.004,2.004-3.168,4.784-3.168,7.758v36.396c0,6.012,4.849,10.925,10.925,10.925h36.461c2.844,0,5.624-1.164,7.758-3.168
                             l70.335-70.335V370.877z M216.307,284.057h-21.01v-21.01l133.172-133.042l21.01,21.01L216.307,284.057z M366.352,133.947
-                            l-1.552,1.552l-20.945-21.01l1.552-1.552c5.624-5.624,15.386-5.624,21.01,0C372.234,118.82,371.523,128.776,366.352,133.947z"
-                        />
+                            l-1.552,1.552l-20.945-21.01l1.552-1.552c5.624-5.624,15.386-5.624,21.01,0C372.234,118.82,371.523,128.776,366.352,133.947z" />
                       </g>
                     </g>
                   </svg>
                 </div>
 
-                <span
-                  class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                  [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                  [class.w-0]="!(sidebarService.isOpen$ | async)"
-                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-                >
+                <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                  [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                   Académico
                 </span>
               </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                 class="w-4 h-4 shrink-0 transition-transform duration-300 peer-checked:rotate-180"
-                [class.hidden]="!(sidebarService.isOpen$ | async)"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
+                [class.hidden]="!(sidebarService.isOpen$ | async)" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </label>
 
             <!-- SUBMENU -->
-            <div
-              class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
-              [class.hidden]="!(sidebarService.isOpen$ | async)"
-            >
+            <div class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
+              [class.hidden]="!(sidebarService.isOpen$ | async)">
               <div class="overflow-hidden">
                 <div class="mt-1 ml-11 flex flex-col gap-1 pl-4">
-                  <button
-                    routerLink="/user"
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
-                    <svg
-                      class="w-4 h-4 me-1.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"
-                      />
+                  <button routerLink="/user"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
+                    <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023" />
                     </svg>
 
                     Grados
                   </button>
 
                   <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
-                    <svg
-                      class="w-4 h-4 me-1.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"
-                      />
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
+                    <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023" />
                     </svg>
 
                     Materias
                   </button>
 
                   <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     Áreas
                   </button>
 
                   <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     Materias por grado
                   </button>
                 </div>
@@ -410,83 +249,45 @@
           <li>
             <input type="checkbox" id="anio_dropdown" class="peer hidden" />
 
-            <label
-              for="anio_dropdown"
-              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
-            >
+            <label for="anio_dropdown"
+              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200">
               <div class="flex items-center gap-4 min-w-0">
                 <div class="flex items-center justify-center min-w-[24px]">
-                  <svg
-                    (click)="toggleSidebar()"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg (click)="toggleSidebar()" width="24" height="24" viewBox="0 0 28 28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M13.9999 2.33331V4.66665M18.3469 24.5116C18.1413 24.8632 17.8472 25.1547 17.4939 25.3573C17.1406 25.56 16.7405 25.6666 16.3333 25.6666H4.66659C4.04775 25.6666 3.45425 25.4208 3.01667 24.9832C2.57908 24.5456 2.33325 23.9522 2.33325 23.3333V11.6666C2.33325 11.0478 2.57908 10.4543 3.01667 10.0167C3.45425 9.57915 4.04775 9.33331 4.66659 9.33331M20.9999 2.33331V4.66665M2.33325 15.1666H4.66659M9.33325 9.33331H25.6666M11.6666 3.49998H23.3333C24.6219 3.49998 25.6666 4.54465 25.6666 5.83331V17.5C25.6666 18.7886 24.6219 19.8333 23.3333 19.8333H11.6666C10.3779 19.8333 9.33325 18.7886 9.33325 17.5V5.83331C9.33325 4.54465 10.3779 3.49998 11.6666 3.49998Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
 
-                <span
-                  class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                  [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                  [class.w-0]="!(sidebarService.isOpen$ | async)"
-                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-                >
+                <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                  [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                   Año Academico
                 </span>
               </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 shrink-0 transition-transform duration-300 peer-checked:rotate-180"
-                [class.hidden]="!(sidebarService.isOpen$ | async)"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 shrink-0 transition-transform duration-300 peer-checked:rotate-180 "
+                [class.hidden]="!(sidebarService.isOpen$ | async)" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </label>
 
             <!-- SUBMENU -->
-            <div
-              class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
-              [class.hidden]="!(sidebarService.isOpen$ | async)"
-            >
+            <div class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
+              [class.hidden]="!(sidebarService.isOpen$ | async)">
               <div class="overflow-hidden">
                 <div class="mt-1 ml-11 flex flex-col gap-1 pl-4">
-                  <button
-                    routerLink="/user"
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/user"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
                     <div class="pt-1 pr-1">
-                      <svg
-                        width="19"
-                        height="19"
-                        viewBox="0 0 36 36"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                      <svg width="19" height="19" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M12.8333 16.3333H14V21M18.6667 2.33331V6.99998M3.5 11.6666H24.5M9.33333 2.33331V6.99998M5.83333 4.66665H22.1667C23.4553 4.66665 24.5 5.71132 24.5 6.99998V23.3333C24.5 24.622 23.4553 25.6666 22.1667 25.6666H5.83333C4.54467 25.6666 3.5 24.622 3.5 23.3333V6.99998C3.5 5.71132 4.54467 4.66665 5.83333 4.66665Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </div>
 
@@ -494,8 +295,12 @@
                   </button>
 
                   <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
+                    <div class="pr-1">
+                      <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 20V4M10 20V4M14 20V4M18 20V4M21 5L3 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     Periodos
                   </button>
                 </div>
@@ -505,35 +310,21 @@
 
           <!--matricula-->
           <li>
-            <button
-              routerLink="/dashboard"
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200"
-            >
+            <button routerLink="/dashboard"
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-person-check"
-                  viewBox="0 0 16 16"
-                >
+                <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
                   <path
-                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
-                  />
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
                   <path
-                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
-                  />
+                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Matricula
               </span>
             </button>
@@ -541,75 +332,66 @@
 
           <!--evaluacion-->
           <li>
-            <input
-              type="checkbox"
-              id="evaluacion_dropdown"
-              class="peer hidden"
-            />
+            <input type="checkbox" id="evaluacion_dropdown" class="peer hidden" />
 
-            <label
-              for="evaluacion_dropdown"
-              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
-            >
+            <label for="evaluacion_dropdown"
+              class="group flex items-center justify-between w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition-all duration-200">
               <div class="flex items-center gap-4 min-w-0">
                 <div class="flex items-center justify-center min-w-[24px]">
-                  <svg
+                  <svg 
                     (click)="toggleSidebar()"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 transition-transform duration-200 group-hover:scale-110"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"
-                    ></path>
+                    fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 31.669 31.67"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M7.965,4.084c-0.663,0-1.248,0.433-1.442,1.067L0.066,26.276c-0.14,0.456-0.055,0.952,0.229,1.336
+                          c0.285,0.385,0.734,0.61,1.212,0.61h2.475c0.678,0,1.272-0.451,1.453-1.104l1.414-5.104h6.913l1.541,5.139
+                          c0.191,0.639,0.778,1.074,1.444,1.074h2.707c0.479,0,0.93-0.229,1.214-0.611c0.284-0.389,0.368-0.885,0.227-1.344L14.342,5.145
+                          c-0.196-0.631-0.779-1.061-1.44-1.061H7.965z M7.636,17.914c0,0,1.406-5.354,2.147-8.2c0.049-0.189,0.218-0.321,0.413-0.323
+                          c0.195-0.002,0.367,0.126,0.42,0.313l2.358,8.21H7.636z" />
+                                            <path
+                                              d="M26.996,8.374V4.366c0-0.51-0.413-0.923-0.924-0.923h-1.61c-0.51,0-0.923,0.413-0.923,0.923v4.008h-3.751
+                          c-0.511,0-0.923,0.413-0.923,0.923v1.483c0,0.51,0.412,0.923,0.923,0.923h3.751v4.007c0,0.51,0.413,0.922,0.923,0.922h1.61
+                          c0.511,0,0.924-0.413,0.924-0.922v-4.007h3.751c0.51,0,0.923-0.413,0.923-0.923V9.297c0-0.51-0.413-0.923-0.923-0.923H26.996z" />
+                      </g>
+                    </g>
                   </svg>
                 </div>
 
-                <span
-                  class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                  [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                  [class.w-0]="!(sidebarService.isOpen$ | async)"
-                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-                >
+                <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                  [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                  [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                   Evaluación
                 </span>
               </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                 class="w-4 h-4 shrink-0 transition-transform duration-300 peer-checked:rotate-180"
-                [class.hidden]="!(sidebarService.isOpen$ | async)"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
+                [class.hidden]="!(sidebarService.isOpen$ | async)" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </label>
 
             <!-- SUBMENU -->
-            <div
-              class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
-              [class.hidden]="!(sidebarService.isOpen$ | async)"
-            >
+            <div class="grid transition-all duration-300 grid-rows-[0fr] peer-checked:grid-rows-[1fr]"
+              [class.hidden]="!(sidebarService.isOpen$ | async)">
               <div class="overflow-hidden">
                 <div class="mt-1 ml-11 flex flex-col gap-1 pl-4">
-                  <button
-                    routerLink="/user"
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/user"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
+                    <div class=" pr-1.5 ">
+                      <svg fill="currentColor" width="16px" height="16px" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-task-list"><path d='M6 0h8a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6zm0 2a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4H6zm6 7h3a1 1 0 0 1 0 2h-3a1 1 0 0 1 0-2zm-2 4h5a1 1 0 0 1 0 2h-5a1 1 0 0 1 0-2zm0-8h5a1 1 0 0 1 0 2h-5a1 1 0 1 1 0-2zm-4.172 5.243L7.95 8.12a1 1 0 1 1 1.414 1.415l-2.828 2.828a1 1 0 0 1-1.415 0L3.707 10.95a1 1 0 0 1 1.414-1.414l.707.707z'/></svg>
+                    </div>
                     Actividades
                   </button>
 
-                  <button
-                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-                  >
+                  <button routerLink="/user"
+                    class="flex items-center w-full px-4 py-2 rounded-xl text-base text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
+                    <div class=" pr-1.5">
+                        <svg width="17px" height="17px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M905.92 237.76a32 32 0 0 0-52.48 36.48A416 416 0 1 1 96 512a418.56 418.56 0 0 1 297.28-398.72 32 32 0 1 0-18.24-61.44A480 480 0 1 0 992 512a477.12 477.12 0 0 0-86.08-274.24z" fill="currentColor" /><path d="M630.72 113.28A413.76 413.76 0 0 1 768 185.28a32 32 0 0 0 39.68-50.24 476.8 476.8 0 0 0-160-83.2 32 32 0 0 0-18.24 61.44zM489.28 86.72a36.8 36.8 0 0 0 10.56 6.72 30.08 30.08 0 0 0 24.32 0 37.12 37.12 0 0 0 10.56-6.72A32 32 0 0 0 544 64a33.6 33.6 0 0 0-9.28-22.72A32 32 0 0 0 505.6 32a20.8 20.8 0 0 0-5.76 1.92 23.68 23.68 0 0 0-5.76 2.88l-4.8 3.84a32 32 0 0 0-6.72 10.56A32 32 0 0 0 480 64a32 32 0 0 0 2.56 12.16 37.12 37.12 0 0 0 6.72 10.56zM355.84 313.6a36.8 36.8 0 0 0-13.12 18.56l-107.52 312.96a37.44 37.44 0 0 0 2.56 35.52 32 32 0 0 0 24.96 10.56 27.84 27.84 0 0 0 17.28-5.76 43.84 43.84 0 0 0 10.56-13.44 100.16 100.16 0 0 0 7.04-15.36l4.8-12.8 17.6-49.92h118.72l24.96 69.76a45.76 45.76 0 0 0 10.88 19.2 28.8 28.8 0 0 0 20.48 8.32h2.24a27.52 27.52 0 0 0 27.84-15.68 41.28 41.28 0 0 0 0-29.44l-107.84-313.6a36.8 36.8 0 0 0-13.44-19.2 44.16 44.16 0 0 0-48 0.32z m24.32 96l41.6 125.44h-83.2zM594.88 544a66.56 66.56 0 0 0 25.6 4.16h62.4v78.72a29.12 29.12 0 0 0 32 32 26.24 26.24 0 0 0 27.2-16.32 73.28 73.28 0 0 0 4.16-26.24v-66.88h73.6a27.84 27.84 0 0 0 29.44-32 26.56 26.56 0 0 0-16-27.2 64 64 0 0 0-23.04-4.16h-64v-75.84a28.16 28.16 0 0 0-32-30.08 26.56 26.56 0 0 0-27.2 15.68 64 64 0 0 0-4.16 24v66.88h-62.72a69.44 69.44 0 0 0-25.6 4.16 26.56 26.56 0 0 0-15.68 27.2 25.92 25.92 0 0 0 16 25.92z" fill="currentColor" /></svg>
+                    </div>
                     Calificaciones
                   </button>
                 </div>
@@ -620,34 +402,21 @@
           <!-- Asistencias -->
           <li>
             <button
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-            >
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
+                <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                   fill="currentColor"
                   class="bi bi-person-check-fill transition-transform duration-200 group-hover:scale-110"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"
-                  />
-                  <path
-                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-                  />
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Asistencia
               </span>
             </button>
@@ -656,18 +425,10 @@
           <!--resultados-->
           <li>
             <button
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-            >
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  fill="currentColor"
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 32 32"
-                  id="icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg (click)="toggleSidebar()" fill="currentColor" width="24px" height="24px" viewBox="0 0 32 32"
+                  id="icon" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <style>
                       .cls-1 {
@@ -683,24 +444,15 @@
                   <rect x="9.9999" y="13" width="2" height="2" />
                   <path
                     d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"
-                    transform="translate(0 0)"
-                  />
-                  <rect
-                    id="_Transparent_Rectangle_"
-                    data-name="&lt;Transparent Rectangle&gt;"
-                    class="cls-1"
-                    width="32"
-                    height="32"
-                  />
+                    transform="translate(0 0)" />
+                  <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32"
+                    height="32" />
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Resultados
               </span>
             </button>
@@ -709,33 +461,20 @@
           <!--reportes-->
           <li>
             <button
-              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
-            >
+              class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200">
               <div class="flex items-center justify-center min-w-[24px]">
-                <svg
-                  (click)="toggleSidebar()"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  class="bi bi-file-earmark-bar-graph"
-                  viewBox="0 0 16 16"
-                >
+                <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                  fill="currentColor" class="bi bi-file-earmark-bar-graph" viewBox="0 0 16 16">
                   <path
-                    d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"
-                  />
+                    d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z" />
                   <path
-                    d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
-                  />
+                    d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                 </svg>
               </div>
 
-              <span
-                class="text-base font-semibold whitespace-nowrap transition-all duration-200"
-                [class.opacity-0]="!(sidebarService.isOpen$ | async)"
-                [class.w-0]="!(sidebarService.isOpen$ | async)"
-                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)"
-              >
+              <span class="text-base font-semibold whitespace-nowrap transition-all duration-200"
+                [class.opacity-0]="!(sidebarService.isOpen$ | async)" [class.w-0]="!(sidebarService.isOpen$ | async)"
+                [class.overflow-hidden]="!(sidebarService.isOpen$ | async)">
                 Reportes
               </span>
             </button>
@@ -748,66 +487,37 @@
     <div class="shrink-0 pt-3 mt-auto border-t border-gray-200 space-y-2 pb-2">
       <!-- SETTINGS -->
       <button
-        class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-gray-200 transition-all duration-200"
-      >
+        class="group flex items-center w-full gap-4 px-4 py-3 rounded-2xl text-gray-700 hover:bg-gray-200 transition-all duration-200">
         <div class="flex items-center justify-center min-w-[24px]">
-          <svg
-            (click)="toggleSidebar()"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-gear"
-            viewBox="0 0 16 16"
-            class="w-5 h-5 transition-transform duration-200 group-hover:rotate-90"
-          >
+          <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-gear" viewBox="0 0 16 16"
+            class="w-5 h-5 transition-transform duration-200 group-hover:rotate-90">
             <path
-              d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"
-            />
+              d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
             <path
-              d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"
-            />
+              d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
           </svg>
         </div>
 
-        <span
-          *ngIf="sidebarService.isOpen$ | async"
-          class="text-base font-semibold"
-          >Settings</span
-        >
+        <span *ngIf="sidebarService.isOpen$ | async" class="text-base font-semibold">Settings</span>
       </button>
 
       <!-- LOGOUT -->
       <button (click)="logout()"
-        class="group flex items-center w-full gap-4 px-4 py-3 mb-2 rounded-2xl text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-200"
-      >
+        class="group flex items-center w-full gap-4 px-4 py-3 mb-2 rounded-2xl text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-200">
         <!-- ... icono ... -->
         <div class="flex items-center justify-center min-w-[24px]">
-          <svg
-            (click)="toggleSidebar()"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
+          <svg (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-box-arrow-left w-5 h-5 transition-transform duration-200 group-hover:scale-110"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"
-            />
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+            <path fill-rule="evenodd"
+              d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
           </svg>
         </div>
 
-        <span
-          *ngIf="sidebarService.isOpen$ | async"
-          class="text-base font-semibold"
-          >Logout</span
-        >
+        <span *ngIf="sidebarService.isOpen$ | async" class="text-base font-semibold">Logout</span>
       </button>
     </div>
   </div>

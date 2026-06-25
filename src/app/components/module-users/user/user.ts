@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 export interface User {
   id: number;
-  name: string;
+  firts_name: string;
   last_name: string;
   email: string;
   username: string;
@@ -114,7 +114,7 @@ export class User implements OnInit, OnDestroy {
   }
  
   deleteUser(user: User): void {
-    if (!confirm(`¿Eliminar a ${user.name} ${user.last_name}?`)) return;
+    if (!confirm(`¿Eliminar a ${user.firts_name} ${user.last_name}?`)) return;
  
     this.userService.delete(user.id).subscribe({
       next: () => this.loadUsers(),

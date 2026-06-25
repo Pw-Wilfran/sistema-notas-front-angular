@@ -1,6 +1,6 @@
 export interface User {
     id: number;
-    name: string;
+    firts_name: string;
     last_name: string;
     email: string;
     username: string;
@@ -16,7 +16,7 @@ export interface Role {
 }
 
 export interface CreateUserDto {
-    name: string;
+    firts_name: string;
     last_name: string;
     email: string;
     username: string;
@@ -26,7 +26,7 @@ export interface CreateUserDto {
 }
 
 export interface UpdateUserDto {
-    name?: string;
+    firts_name?: string;
     last_name?: string;
     email?: string;
     username?: string;

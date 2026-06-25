@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.scss',
 })
 export class Login {
-  email: string = '';
+  login: string = '';
   password: string = '';
   error: string = '';
 
@@ -19,11 +19,11 @@ export class Login {
     private router: Router
   ) {}
 
-  login() {
+  Acceder() {
     this.error = '';
 
     this.authService.login({
-      email: this.email,
+      login: this.login,
       password: this.password
     }).subscribe({
       next: (res: any) => {

@@ -1,1 +1,553 @@
-<p>students works!</p>
+<div class="min-h-screen bg-[#f4f7fb] text-slate-700 p-4 lg:p-8">
+
+    <!-- HEADER -->
+    <div class="flex flex-col gap-6 mb-8">
+
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+
+            <div>
+                <p class="text-sm font-medium text-slate-400 tracking-wide uppercase">
+                    Gestión Académica
+                </p>
+
+                <h1 class="text-3xl font-bold text-slate-800 tracking-tight">
+                    Estudiantes
+                </h1>
+
+                <p class="text-sm text-slate-500 mt-1">
+                    Administra estudiantes, rendimiento académico y asistencia.
+                </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <button
+                    class="h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition text-sm font-medium shadow-sm">
+                    Exportar
+                </button>
+
+                <button
+                    routerLink="/new-student"
+                    class="h-11 px-5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold shadow-lg shadow-slate-900/10 transition">
+                    + Nuevo estudiante
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium">
+                            Total estudiantes
+                        </p>
+
+                        <h2 class="text-3xl font-bold text-slate-800 mt-2">
+                            1,248
+                        </h2>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center">
+                        👨‍🎓
+                    </div>
+                </div>
+
+                <p class="text-xs text-emerald-600 mt-4 font-medium">
+                    +12% este mes
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium">
+                            Activos
+                        </p>
+
+                        <h2 class="text-3xl font-bold text-slate-800 mt-2">
+                            1,180
+                        </h2>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center">
+                        🟢
+                    </div>
+                </div>
+
+                <p class="text-xs text-slate-500 mt-4">
+                    94% del total
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium">
+                            Riesgo académico
+                        </p>
+
+                        <h2 class="text-3xl font-bold text-slate-800 mt-2">
+                            38
+                        </h2>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center">
+                        ⚠️
+                    </div>
+                </div>
+
+                <p class="text-xs text-amber-600 mt-4 font-medium">
+                    Requieren seguimiento
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-400 font-medium">
+                            Asistencia promedio
+                        </p>
+
+                        <h2 class="text-3xl font-bold text-slate-800 mt-2">
+                            92%
+                        </h2>
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center">
+                        📊
+                    </div>
+                </div>
+
+                <p class="text-xs text-slate-500 mt-4">
+                    Últimos 30 días
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+
+        <!-- TOPBAR -->
+        <div class="p-5 border-b border-slate-100">
+
+            <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+
+                <!-- SEARCH -->
+                <div class="relative w-full xl:max-w-md">
+
+                    <input type="text" placeholder="Buscar estudiante..."
+                        class="w-full h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 pl-11 text-sm outline-none focus:ring-4 focus:ring-slate-200 focus:border-slate-300 transition" />
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+
+                </div>
+
+                <!-- FILTERS -->
+                <div class="flex flex-wrap items-center gap-3">
+
+                    <select
+                        class="h-11 rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none focus:ring-4 focus:ring-slate-200">
+                        <option>Todos los grados</option>
+                        <option>6-A</option>
+                        <option>7-B</option>
+                        <option>8-C</option>
+                    </select>
+
+                    <select
+                        class="h-11 rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none focus:ring-4 focus:ring-slate-200">
+                        <option>Todos los estados</option>
+                        <option>Activo</option>
+                        <option>Inactivo</option>
+                        <option>Riesgo</option>
+                    </select>
+
+                    <button
+                        class="h-11 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition text-sm font-medium">
+                        Filtrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+        <div class="overflow-x-auto">
+
+            <table class="w-full min-w-[1100px]">
+
+                <thead class="bg-slate-50 border-b border-slate-200">
+
+                    <tr class="text-left">
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Estudiante
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Curso
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Promedio
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Asistencia
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Estado
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400">
+                            Última actividad
+                        </th>
+
+                        <th class="px-6 py-4 text-xs font-semibold tracking-wide uppercase text-slate-400 text-right">
+                            Acciones
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="divide-y divide-slate-100 bg-white">
+
+                    <!-- ROW -->
+                    <tr class="hover:bg-slate-50/80 transition">
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-4">
+
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-slate-200 flex items-center justify-center font-bold text-slate-600">
+                                    AP
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold text-slate-800">
+                                        Ana Pérez
+                                    </h3>
+
+                                    <p class="text-sm text-slate-500">
+                                        ana.perez@email.com
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm font-medium text-slate-700">
+                            10-A
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+
+                                <span class="font-semibold text-slate-700">
+                                    4.8
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-full max-w-[120px] h-2 rounded-full bg-slate-100 overflow-hidden">
+                                    <div class="h-full w-[94%] bg-slate-800 rounded-full"></div>
+                                </div>
+
+                                <span class="text-sm font-medium text-slate-600">
+                                    94%
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">
+                                Activo
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm text-slate-500">
+                            Hace 2 horas
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center justify-end gap-2">
+
+                                <button
+                                    routerLink="/detail-student"
+                                    class="h-9 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-sm font-medium transition">
+                                    Ver
+                                </button>
+
+                                <button
+                                    routerLink="/edit-student"
+                                    class="h-9 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium transition">
+                                    Editar
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ROW -->
+                    <tr class="hover:bg-slate-50/80 transition">
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-4">
+
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center font-bold text-amber-700">
+                                    LG
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold text-slate-800">
+                                        Luis Gómez
+                                    </h3>
+
+                                    <p class="text-sm text-slate-500">
+                                        luis.gomez@email.com
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm font-medium text-slate-700">
+                            9-B
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+
+                                <span class="font-semibold text-slate-700">
+                                    3.1
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-full max-w-[120px] h-2 rounded-full bg-slate-100 overflow-hidden">
+                                    <div class="h-full w-[72%] bg-amber-500 rounded-full"></div>
+                                </div>
+
+                                <span class="text-sm font-medium text-slate-600">
+                                    72%
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">
+                                Riesgo
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm text-slate-500">
+                            Ayer
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center justify-end gap-2">
+
+                                <button
+                                    class="h-9 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-sm font-medium transition">
+                                    Ver
+                                </button>
+
+                                <button
+                                    class="h-9 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium transition">
+                                    Editar
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <!-- ROW -->
+                    <tr class="hover:bg-slate-50/80 transition">
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-4">
+
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center font-bold text-rose-700">
+                                    CR
+                                </div>
+
+                                <div>
+                                    <h3 class="font-semibold text-slate-800">
+                                        Camila Rodríguez
+                                    </h3>
+
+                                    <p class="text-sm text-slate-500">
+                                        camila@email.com
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm font-medium text-slate-700">
+                            11-C
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+
+                                <span class="font-semibold text-slate-700">
+                                    2.4
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center gap-2">
+
+                                <div class="w-full max-w-[120px] h-2 rounded-full bg-slate-100 overflow-hidden">
+                                    <div class="h-full w-[51%] bg-rose-500 rounded-full"></div>
+                                </div>
+
+                                <span class="text-sm font-medium text-slate-600">
+                                    51%
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-semibold">
+                                Crítico
+                            </span>
+
+                        </td>
+
+                        <td class="px-6 py-5 text-sm text-slate-500">
+                            Hace 5 días
+                        </td>
+
+                        <td class="px-6 py-5">
+
+                            <div class="flex items-center justify-end gap-2">
+
+                                <button
+                                    class="h-9 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-sm font-medium transition">
+                                    Ver
+                                </button>
+
+                                <button
+                                    class="h-9 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium transition">
+                                    Editar
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 px-6 py-5 border-t border-slate-100 bg-slate-50">
+
+            <p class="text-sm text-slate-500">
+                Mostrando 1 a 10 de 1,248 estudiantes
+            </p>
+
+            <div class="flex items-center gap-2">
+
+                <button class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition">
+                    ←
+                </button>
+
+                <button class="w-10 h-10 rounded-xl bg-slate-900 text-white font-semibold">
+                    1
+                </button>
+
+                <button class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition">
+                    2
+                </button>
+
+                <button class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition">
+                    3
+                </button>
+
+                <button class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

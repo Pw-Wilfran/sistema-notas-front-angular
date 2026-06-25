@@ -15,7 +15,7 @@
                         <!-- AVATAR -->
                         <div
                             class="w-24 h-24 rounded-3xl bg-slate-900 text-white flex items-center justify-center text-3xl font-bold shrink-0 shadow-lg shadow-slate-900/10">
-                            JP
+                            CR
                         </div>
 
                         <!-- INFO -->
@@ -23,8 +23,8 @@
 
                             <div class="flex flex-wrap items-center gap-3 mb-3">
 
-                                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-semibold">
-                                    Editando estudiante
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
+                                    Docente
                                 </span>
 
                                 <span
@@ -35,23 +35,28 @@
                             </div>
 
                             <h1 class="text-3xl font-bold tracking-tight text-slate-800">
-                                Editar estudiante
+                                Carlos Rodríguez
                             </h1>
 
                             <p class="text-slate-500 mt-2">
-                                Actualizando información académica y personal.
+                                Coordinador del área de matemáticas y docente de secundaria.
                             </p>
 
                             <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-5 text-sm text-slate-500">
 
                                 <div class="flex items-center gap-2">
                                     <div class="w-2 h-2 rounded-full bg-slate-300"></div>
-                                    Código: EST-2026-0145
+                                    Código DOC-021
                                 </div>
 
                                 <div class="flex items-center gap-2">
                                     <div class="w-2 h-2 rounded-full bg-slate-300"></div>
-                                    Décimo A
+                                    Matemáticas
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                                    Tiempo completo
                                 </div>
 
                             </div>
@@ -97,7 +102,7 @@
                         </h2>
 
                         <p class="text-sm text-slate-500 mt-1">
-                            Datos básicos del estudiante.
+                            Datos generales del docente.
                         </p>
 
                     </div>
@@ -106,55 +111,61 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                            <!-- NAME -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
                                     Nombre
                                 </label>
 
-                                <input type="text" value="Juan"
+                                <input type="text" value="Carlos"
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
 
                             </div>
 
-                            <!-- LAST NAME -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
                                     Apellido
                                 </label>
 
-                                <input type="text" value="Pérez Gómez"
+                                <input type="text" value="Rodríguez"
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
 
                             </div>
 
-                            <!-- DOCUMENT -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
                                     Documento
                                 </label>
 
-                                <input type="text" value="1002456789"
+                                <input type="text" value="1045896321"
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
 
                             </div>
 
-                            <!-- BIRTH -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
                                     Fecha de nacimiento
                                 </label>
 
-                                <input type="date" value="2010-05-14"
+                                <input type="date" value="1988-04-14"
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
 
                             </div>
 
-                            <!-- PHONE -->
+                            <div>
+
+                                <label class="block text-sm font-medium text-slate-600 mb-2">
+                                    Correo electrónico
+                                </label>
+
+                                <input type="email" value="carlos@colegio.edu.co"
+                                    class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
+
+                            </div>
+
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
@@ -166,26 +177,13 @@
 
                             </div>
 
-                            <!-- EMAIL -->
-                            <div>
-
-                                <label class="block text-sm font-medium text-slate-600 mb-2">
-                                    Correo electrónico
-                                </label>
-
-                                <input type="email" value="juan@email.com"
-                                    class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
-
-                            </div>
-
-                            <!-- ADDRESS -->
                             <div class="md:col-span-2">
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
                                     Dirección
                                 </label>
 
-                                <input type="text" value="Calle 45 #20-12"
+                                <input type="text" value="Barranquilla, Atlántico"
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition" />
 
                             </div>
@@ -202,11 +200,11 @@
                     <div class="px-6 py-5 border-b border-slate-100 bg-slate-50">
 
                         <h2 class="text-lg font-semibold text-slate-800">
-                            Información académica
+                            Información laboral
                         </h2>
 
                         <p class="text-sm text-slate-500 mt-1">
-                            Datos institucionales y matrícula.
+                            Asignaciones y datos institucionales.
                         </p>
 
                     </div>
@@ -215,22 +213,35 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                            <!-- COURSE -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
-                                    Curso
+                                    Área académica
                                 </label>
 
                                 <select
                                     class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition">
-                                    <option>Décimo A</option>
-                                    <option>Décimo B</option>
+                                    <option>Matemáticas</option>
+                                    <option>Lenguaje</option>
+                                    <option>Ciencias</option>
                                 </select>
 
                             </div>
 
-                            <!-- SHIFT -->
+                            <div>
+
+                                <label class="block text-sm font-medium text-slate-600 mb-2">
+                                    Cargo
+                                </label>
+
+                                <select
+                                    class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition">
+                                    <option>Docente</option>
+                                    <option>Coordinador</option>
+                                </select>
+
+                            </div>
+
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
@@ -245,22 +256,6 @@
 
                             </div>
 
-                            <!-- YEAR -->
-                            <div>
-
-                                <label class="block text-sm font-medium text-slate-600 mb-2">
-                                    Año lectivo
-                                </label>
-
-                                <select
-                                    class="w-full h-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm focus:outline-none focus:ring-4 focus:ring-slate-200 transition">
-                                    <option>2026</option>
-                                    <option>2025</option>
-                                </select>
-
-                            </div>
-
-                            <!-- STATUS -->
                             <div>
 
                                 <label class="block text-sm font-medium text-slate-600 mb-2">
@@ -275,89 +270,142 @@
 
                             </div>
 
+                            <div class="md:col-span-2">
+
+                                <label class="block text-sm font-medium text-slate-600 mb-2">
+                                    Observaciones
+                                </label>
+
+                                <textarea rows="4"
+                                    class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm resize-none focus:outline-none focus:ring-4 focus:ring-slate-200 transition">Docente encargado del área de matemáticas en secundaria.</textarea>
+
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
-                <!-- GUARDIANS -->
+                <!-- COURSES -->
                 <div class="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
 
-                    <div
-                        class="px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-slate-50">
+                    <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
 
                         <div>
 
                             <h2 class="text-lg font-semibold text-slate-800">
-                                Acudientes vinculados
+                                Cursos asignados
                             </h2>
 
                             <p class="text-sm text-slate-500 mt-1">
-                                Gestión de responsables del estudiante.
+                                Cursos y materias asignadas actualmente.
                             </p>
 
                         </div>
 
                         <button
                             class="h-11 px-5 rounded-2xl bg-slate-900 hover:bg-slate-800 transition text-sm font-semibold text-white">
-                            + Vincular acudiente
+                            + Asignar curso
                         </button>
 
                     </div>
 
-                    <div class="p-6 lg:p-8 space-y-4">
+                    <div class="p-6 lg:p-8">
 
-                        <!-- CARD -->
-                        <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition">
+                        <div class="space-y-4">
 
-                            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+                            <!-- ITEM -->
+                            <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition">
 
-                                <div class="flex items-start gap-4">
-
-                                    <div
-                                        class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center font-bold text-slate-700 shrink-0">
-                                        MP
-                                    </div>
+                                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
 
                                     <div>
 
                                         <div class="flex flex-wrap items-center gap-2 mb-2">
 
                                             <h3 class="font-semibold text-slate-800">
-                                                María Pérez
+                                                Décimo A
                                             </h3>
 
                                             <span
-                                                class="px-2 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[11px] font-semibold">
-                                                Principal
+                                                class="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-[11px] font-semibold">
+                                                Matemáticas
                                             </span>
 
                                         </div>
 
                                         <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500">
 
-                                            <p>Madre</p>
-                                            <p>300 000 0000</p>
-                                            <p>maria@email.com</p>
+                                            <p>35 estudiantes</p>
+                                            <p>2026</p>
+                                            <p>Jornada mañana</p>
 
                                         </div>
 
                                     </div>
 
+                                    <div class="flex gap-3">
+
+                                        <button
+                                            class="h-10 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition text-sm font-medium text-slate-600">
+                                            Ver curso
+                                        </button>
+
+                                        <button
+                                            class="h-10 px-4 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 transition text-sm font-medium text-rose-600">
+                                            Remover
+                                        </button>
+
+                                    </div>
+
                                 </div>
 
-                                <div class="flex gap-3">
+                            </div>
 
-                                    <button
-                                        class="h-10 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition text-sm font-medium text-slate-600">
-                                        Editar
-                                    </button>
+                            <!-- ITEM -->
+                            <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition">
 
-                                    <button
-                                        class="h-10 px-4 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 transition text-sm font-medium text-rose-600">
-                                        Desvincular
-                                    </button>
+                                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+
+                                    <div>
+
+                                        <div class="flex flex-wrap items-center gap-2 mb-2">
+
+                                            <h3 class="font-semibold text-slate-800">
+                                                Noveno B
+                                            </h3>
+
+                                            <span
+                                                class="px-2 py-1 rounded-full bg-purple-100 text-purple-700 text-[11px] font-semibold">
+                                                Álgebra
+                                            </span>
+
+                                        </div>
+
+                                        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500">
+
+                                            <p>32 estudiantes</p>
+                                            <p>2026</p>
+                                            <p>Jornada mañana</p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex gap-3">
+
+                                        <button
+                                            class="h-10 px-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 transition text-sm font-medium text-slate-600">
+                                            Ver curso
+                                        </button>
+
+                                        <button
+                                            class="h-10 px-4 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 transition text-sm font-medium text-rose-600">
+                                            Remover
+                                        </button>
+
+                                    </div>
 
                                 </div>
 
@@ -374,11 +422,11 @@
             <!-- RIGHT -->
             <div class="space-y-6">
 
-                <!-- QUICK INFO -->
+                <!-- SUMMARY -->
                 <div class="bg-white border border-slate-200 rounded-3xl shadow-sm p-6">
 
                     <h2 class="text-lg font-semibold text-slate-800 mb-6">
-                        Resumen rápido
+                        Resumen docente
                     </h2>
 
                     <div class="space-y-5">
@@ -388,18 +436,18 @@
                             <div>
 
                                 <p class="text-sm text-slate-500">
-                                    Estado matrícula
+                                    Cursos asignados
                                 </p>
 
-                                <h3 class="text-xl font-bold text-slate-800 mt-1">
-                                    Activa
+                                <h3 class="text-2xl font-bold text-slate-800 mt-1">
+                                    5
                                 </h3>
 
                             </div>
 
                             <div
-                                class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
-                                ✓
+                                class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 font-bold">
+                                📚
                             </div>
 
                         </div>
@@ -409,18 +457,18 @@
                             <div>
 
                                 <p class="text-sm text-slate-500">
-                                    Asistencia
+                                    Estudiantes
                                 </p>
 
-                                <h3 class="text-xl font-bold text-slate-800 mt-1">
-                                    96%
+                                <h3 class="text-2xl font-bold text-slate-800 mt-1">
+                                    167
                                 </h3>
 
                             </div>
 
                             <div
-                                class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 font-bold">
-                                %
+                                class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">
+                                👨‍🎓
                             </div>
 
                         </div>
@@ -430,18 +478,95 @@
                             <div>
 
                                 <p class="text-sm text-slate-500">
-                                    Observaciones
+                                    Experiencia
                                 </p>
 
-                                <h3 class="text-xl font-bold text-slate-800 mt-1">
-                                    2
+                                <h3 class="text-2xl font-bold text-slate-800 mt-1">
+                                    8 años
                                 </h3>
 
                             </div>
 
                             <div
                                 class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-700 font-bold">
-                                !
+                                ⭐
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+                <div class="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+
+                    <div class="px-6 py-5 border-b border-slate-100">
+
+                        <h2 class="text-lg font-semibold text-slate-800">
+                            Actividad reciente
+                        </h2>
+
+                    </div>
+
+                    <div class="p-6 space-y-5">
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm font-medium text-slate-700">
+                                    Curso actualizado
+                                </p>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Hace 2 días
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+                                📘
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm font-medium text-slate-700">
+                                    Nueva asignación registrada
+                                </p>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Hace 1 semana
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex gap-4">
+
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+                                📝
+                            </div>
+
+                            <div>
+
+                                <p class="text-sm font-medium text-slate-700">
+                                    Información modificada
+                                </p>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Hace 2 semanas
+                                </p>
+
                             </div>
 
                         </div>

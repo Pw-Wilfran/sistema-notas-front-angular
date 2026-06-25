@@ -19,19 +19,19 @@ export class AuthService {
 
 
       login(data: any) {
-        return this.http.post(`${this.apiUrl}/auth/login`, data);
+        return this.http.post(`${this.apiUrl}/login`, data);
       }
 
       register(data: any) {
-        return this.http.post(`${this.apiUrl}/auth/register`, data);
+        return this.http.post(`${this.apiUrl}/register`, data);
       }
 
       me() {
-        return this.http.get(`${this.apiUrl}/auth/me`);
+        return this.http.get(`${this.apiUrl}/me`);
       }
 
       logout() {
-        return this.http.post(`${this.apiUrl}/auth/logout`, {});
+        return this.http.post(`${this.apiUrl}/logout`, {});
       }
 
       saveSession(data: any) {
